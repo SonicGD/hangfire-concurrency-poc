@@ -28,8 +28,6 @@ namespace hangfire_concurrency_poc
 
         public void Configure(IApplicationBuilder appBuilder)
         {
-            GlobalConfiguration.Configuration.UseActivator(new HangfireActivator(appBuilder.ApplicationServices));
-
             appBuilder.UseHangfireServer();
         }
     }
